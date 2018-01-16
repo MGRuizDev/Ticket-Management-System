@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+}
+
+.jumbotron{
+  border: 1px solid black;
+}
+
+body{
+  background-color: #fce574;
+}
+
+.footer{
+  width: 200px;
+  height: 40px;
+  border-radius: 55px;
+  text-align: center;
+  background-color: #cde5f7;
+  position: relative;
+  left: 450px;
+}
+
+.footer p{
+  font-size: 15px;
+  position: relative;
+  top: 8px;
+}

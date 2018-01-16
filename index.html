@@ -1,0 +1,54 @@
+<!-- Bootstrap functionality is include with this two files one for css and the orher for javascript, which is at the end of the body. | In order to make sure the issues are posted everytime the page is rendered(loaded). We call the JSfunction 	fetchIssues() from the main.js script which will fetch the list of issues or issue and posted.--><!--Using Bootstrap in the tags. Note live-server cn be used.--><!--html elements needed for the form which are in bootstrap css. get them using class jumbotron.--><!-- Inside form element we have three div sections --><!-- The button will have two classes the regular btn class and the btn-primary to give it the blue color.--><!-- This div will be used when iterating with javascript and posting the issues.--><!-- Small library, we only gona used for generating global unit idntifiers. -->
+
+<!DOCTYPE html>
+ <html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ticket Management</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+	<body onload="fetchIssues()">
+			<div class="container">
+				<h1>Management Ticket Tracker</h1>
+				<div class="jumbotron">
+					<h3>New Issue Form:</h3>
+					<form id="issueInputForm">
+						<div class="form-group">
+							<label for="issueDescInput">Description</label>
+							<input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue.">
+						</div>
+						<div class="form-group">
+							<label for="issueSeverityInput">Severity Level</label>
+							<select id="issueSeverityInput" class="form-control">
+								<option value="Low">Low</option>
+								<option value="Medium">Medium</option>
+								<option value="High">High</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="issueAssignedToInput">Technician Responsible</label>
+							<input type="text" class="form-control" id="issueAssignedToInput" placeholder="Person Responsible.">
+						</div>
+						<button type="submit" class="btn btn-primary">Add</button>
+					</form>
+				</div>
+
+				<div class="col-lg-12">
+					<div id="issuesList">
+				</div>
+				</div>
+
+				<div class="footer">
+					<p>&copy Copyright MGR</p>
+				</div>
+
+			</div>
+		<script src="chance.min.js"></script>
+		<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+	</body>
+ </html>
